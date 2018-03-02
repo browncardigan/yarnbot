@@ -1,9 +1,6 @@
 <?php
 
-echo '<pre>';
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// this is the basic 'cron job' to send the weekly updates to slack
 
 // init
 @include("_conf.php");
@@ -13,11 +10,7 @@ ini_set('display_errors', 1);
 $slack = new Slack;
 $slack->init();
 
-// tester
-//$result = $slack->tester();
-//print_r($result);
-
-// real world
+// execute
 $slack->sendWeeklyUpdate();
-	
+
 ?>

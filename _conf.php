@@ -18,8 +18,7 @@ define("DB_PASSWORD", "root");
 define("DB_NAME", "junkee");
 
 // ga
-define("GA_PROFILE_ID", 103349026); // junkee
-//define("GA_PROFILE_ID", 150441700); // punkee
+define("GA_PROFILE_ID", 103349026);
 define("GA_API_PATH", ROOT . 'thirdparty/google-api-php-client/');
 define("GA_API_AUTOLOAD_PATH", GA_API_PATH . 'vendor/autoload.php');
 define("GA_API_CRED_PATH", GA_API_PATH . 'cred/service-account-credentials-junkee.json');
