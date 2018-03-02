@@ -86,30 +86,6 @@ class Slack {
 		
 	}
 	
-	function endOfMessage() {
-		$this->message_data = array(
-			'text' 			=> 'Edit Message Settings',
-			'attachments'	=> array()
-		);
-		
-		$this->message_data['attachments'][] = array(
-			'fallback'	=> 'Watch this topic at: [someurl]',
-			'actions'	=> array(
-				array(
-					'type' 	=> 'button',
-					'text'	=> 'YES',
-					'url'	=> 'http://temp.jonnynail.com/yarnbot/hello.php?button',
-					'style'	=> 'primary'
-				)
-			)
-		);
-		$this->debug($this->message_data);
-		//$this->message_data = json_decode(file_get_contents(ROOT . "temp/button.json"), true);
-		//$this->debug($this->message_data);
-		//exit;
-		$this->sendRequest();
-	}
-	
 	function buildReportWeekly() {
 		$this->message_data = array('text' => "Hey team! \n\n*Last week's most popular articles* were:");
 		$weekly = array();
